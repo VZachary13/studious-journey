@@ -28,8 +28,8 @@ currentHour = dayjs().format("H")
   })
 }, 1000);
 
-$('saveBtn').click(function (event) {
-  var eventStuff = event.target.siblings('.description').val(); //named eventstuff because i couldnt think of a better name and now i like it so i refuse to change it
+$('.saveBtn').click(function (event) {
+  var eventStuff = $(this).siblings('.description').val(); //named eventstuff because i couldnt think of a better name and now i like it so i refuse to change it
   var timeBlock = $(this).parent().attr('id');
   localStorage.setItem(timeBlock, eventStuff);
 })
