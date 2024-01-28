@@ -7,8 +7,6 @@ setInterval(() => {
   var currentHour = dayjs().format("H")
   $('.time-block').each(function() {
     var timeBlock = $(this).attr('id');
-  console.log(currentHour)
-  console.log(timeBlock)
    if (currentHour > timeBlock) {
       $(this).addClass('past'); 
       $(this).removeClass('future');  
